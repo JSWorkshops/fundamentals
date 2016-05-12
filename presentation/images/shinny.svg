@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="653px" height="610px" viewBox="0 0 653 610" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>shinny</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <rect id="path-1" x="98" y="55" width="555" height="555"></rect>
+        <path d="M485.454265,354.338335 L428.976362,354.338335 L431.816033,357.178006 L431.816033,526.611716 C431.816033,542.703186 392.376156,543.334224 392.060637,526.611716 L391.745118,506.418499 L394.584789,503.578828 L340,503.578828 L342.839671,506.418499 L342.839671,526.611716 C342.839671,558.479137 359.877698,589.4 413.51593,589.4 C463.367934,589.4 482.614594,558.479137 482.614594,526.611716 L482.614594,357.178006 L485.454265,354.338335 Z M576.954779,445.207811 C566.542652,440.475026 556.761562,432.902569 558.339157,421.543885 C561.494347,395.671326 598.410072,402.928263 612.923947,409.238643 L629.330935,363.803905 C574.115108,339.508941 509.43371,357.178006 507.225077,420.597328 C504.700925,494.113258 594.308325,491.273587 587.997945,519.03926 C581.687564,548.067009 542.563207,531.028983 522.054471,522.19445 L506.594039,571.730935 C535.621788,588.768962 580.109969,596.972456 610.715313,575.201644 C622.705036,566.682631 637.849949,549.329085 639.112025,516.830627 C640.68962,474.23556 606.298047,455.304419 576.954779,445.207811 Z" id="path-2"></path>
+        <polygon id="path-3" points="98.4999987 100.25 62.3512099 119.254547 69.2550125 79.0022738 40.0100238 50.4954562 80.4256093 44.6227232 98.5000007 8 116.574403 44.6227323 156.989986 50.4954855 127.744985 79.0022814 134.648789 119.254548 "></polygon>
+        <polygon id="path-4" points="187.499999 52.25 171.335907 60.7479683 174.422973 42.7489842 161.345946 30.0020333 179.417955 27.3760144 187.5 11 195.58205 27.3760185 213.654059 30.0020464 200.577026 42.7489876 203.664093 60.7479687 "></polygon>
+        <polygon id="path-5" points="187.499999 52.25 171.335907 60.7479683 174.422973 42.7489842 161.345946 30.0020333 179.417955 27.3760144 187.5 11 195.58205 27.3760185 213.654059 30.0020464 200.577026 42.7489876 203.664093 60.7479687 "></polygon>
+        <polygon id="path-6" points="132.499999 172.25 116.335907 180.747968 119.422973 162.748984 106.345946 150.002033 124.417955 147.376014 132.5 131 140.58205 147.376018 158.654059 150.002046 145.577026 162.748988 148.664093 180.747969 "></polygon>
+        <polygon id="path-7" points="427.5 365.25 416.038188 371.275832 418.227199 358.512916 408.954398 349.474169 421.769096 347.612083 427.5 336 433.230908 347.612086 446.045605 349.474178 436.7728 358.512919 438.961811 371.275832 "></polygon>
+        <polygon id="path-8" points="523 533.5 510.656511 539.989358 513.013907 526.244679 503.027813 516.510644 516.828257 514.50532 523 502 529.171747 514.505323 542.97219 516.510654 532.986092 526.244681 535.343489 539.989358 "></polygon>
+        <polygon id="path-9" points="24.4999994 41.25 8.33590685 49.7479683 11.4229731 31.7489842 -1.65405439 19.0020333 16.4179554 16.3760144 24.5000003 3.05311332e-15 32.5820502 16.3760185 50.6540586 19.0020464 37.5770258 31.7489876 40.6640926 49.7479687 "></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-1">
+            <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+            <use fill="#F8E81C" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <g id="JS">
+            <use fill="#000000" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-2"></use>
+            <use fill="none" xlink:href="#path-2"></use>
+        </g>
+        <g id="Star-1">
+            <use stroke="#000000" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" transform="translate(98.500000, 69.500000) rotate(-25.000000) translate(-98.500000, -69.500000) " xlink:href="#path-3"></use>
+            <use stroke="none" fill="none" xlink:href="#path-3"></use>
+        </g>
+        <g id="Star-1">
+            <use stroke="#979797" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" transform="translate(187.500000, 38.500000) rotate(-330.000000) translate(-187.500000, -38.500000) " xlink:href="#path-4"></use>
+            <use stroke="none" fill="none" xlink:href="#path-4"></use>
+        </g>
+        <g id="Star-1">
+            <use stroke="#000000" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" transform="translate(187.500000, 38.500000) rotate(-330.000000) translate(-187.500000, -38.500000) " xlink:href="#path-5"></use>
+            <use stroke="none" fill="none" xlink:href="#path-5"></use>
+        </g>
+        <g id="Star-1">
+            <use stroke="#000000" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" transform="translate(132.500000, 158.500000) rotate(-330.000000) translate(-132.500000, -158.500000) " xlink:href="#path-6"></use>
+            <use stroke="none" fill="none" xlink:href="#path-6"></use>
+        </g>
+        <g id="Star-1">
+            <use stroke="#000000" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" transform="translate(427.500000, 355.500000) rotate(-21.000000) translate(-427.500000, -355.500000) " xlink:href="#path-7"></use>
+            <use stroke="none" fill="none" xlink:href="#path-7"></use>
+        </g>
+        <g id="Star-1">
+            <use stroke="#000000" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" transform="translate(523.000000, 523.000000) rotate(-345.000000) translate(-523.000000, -523.000000) " xlink:href="#path-8"></use>
+            <use stroke="none" fill="none" xlink:href="#path-8"></use>
+        </g>
+        <g id="Star-1">
+            <use stroke="#000000" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" sketch:type="MSShapeGroup" transform="translate(24.500000, 27.500000) rotate(-345.000000) translate(-24.500000, -27.500000) " xlink:href="#path-9"></use>
+            <use stroke="none" fill="none" xlink:href="#path-9"></use>
+        </g>
+    </g>
+</svg>

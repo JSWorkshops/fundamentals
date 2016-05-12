@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>promises</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="600" height="600"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-1">
+            <use fill="none" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+            <use fill="#F8E81C" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <g id="Rectangle-2-+-SOON" sketch:type="MSLayerGroup" transform="translate(300.000000, 301.000000)" fill="#000000">
+            <path d="M189,119 L18,119 L18,45 L189,45 L189,0 L295,84.9024235 L189,164 L189,119 Z" id="Rectangle-2" stroke="#979797" sketch:type="MSShapeGroup"></path>
+            <text id="SOON" sketch:type="MSTextLayer" font-family="Impact" font-size="137.436697" font-style="condensed" font-weight="686" letter-spacing="-1">
+                <tspan x="0" y="287">SOON</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
