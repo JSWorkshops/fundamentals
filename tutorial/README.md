@@ -16,7 +16,7 @@ This is how you check what version of Node you have:
 node --version
 ```
 
-It should say something greater than or equal to `v6.0.0` (e.g., v6.1.0).
+It should say something greater than or equal to `v6.0.0` (e.g., v6.2.0).
 
 Similarly with Mocha
 
