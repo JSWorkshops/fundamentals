@@ -4,10 +4,10 @@ const expect = require('chai').expect;
 describe('default value', function() {
 
   /**
-   * Returns the value in upper case, followed by the value in lowercase. 
-   * 
-   * @param  {String?} value The value to echo
-   * @return {String} defaults to "echo"       
+   * Returns the value in uppercase, followed by the value in lowercase.
+   *
+   * @param  {String?} value The value to echo.
+   * @return {String} defaults to "echo".
    */
   function echo(value){
     return (value.toUpperCase() + " " + value.toLowerCase()).trim();
@@ -41,6 +41,25 @@ describe('default value', function() {
     const car = new ElectricCar();
     expect(car.make).to.equal("tesla");
     expect(car.model).to.equal("model s");
+  });
+
+  // =============================================================
+  
+  function Response(url, method, timeout){
+    this.url = url;
+    this.method = method;
+    this.timeout = timeout;
+  }
+
+  function fetchURL(url, options){
+    return new Response(url, options.method, options.timeout);
+  }
+
+  it('allows us to create objects with objects literals', function(){
+    var response = fetchURL("http://example.com");
+    expect(response.method).to.equal("GET");
+    expect(response.timeout).to.equal(30000);
+    expect(response.url).to.equal("http://example.com");
   });
 
 });
