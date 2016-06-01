@@ -9,8 +9,8 @@ describe('for-of loop', function() {
       "Cherries",
     ];
     for (var i = 0; i < fruits.length; i++) {
-      expect(fruit).to.exist;
-      expect(fruit).to.equal("Red Apples")
+      expect(fruit).to.exist();
+      expect(fruit).to.equal("Red Apples");
       break;
     }
   });
