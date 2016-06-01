@@ -1,7 +1,5 @@
 # ECMAScript fundamentals
 
-## Links
-
  * [Presentation slides](http://jsworkshops.github.io/fundamentals/presentation/).
  * [Tutorial](tutorial/)
 
