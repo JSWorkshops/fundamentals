@@ -14,3 +14,16 @@ This talk aims to give an overview of the new syntax, operators, and primitives 
 
 ### Target Audience
 This is a beginner level tutrial for Web/Node developers. However, it assumes you know a bit about ECMAScript/JavaScript already.
+
+## Code of Conduct
+We are dedicated to providing a harassment-free learning experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, religion, or choice of text editor. We do not tolerate harassment of participants in any form.
+
+All communication should be appropriate for a professional audience including people of many different backgrounds. Sexual language and imagery is not appropriate for any event.
+
+Be kind to others. Do not insult or put down other attendees.
+
+Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate.
+
+Attendees violating these rules may be asked to leave the event at the sole discretion of the conference organizers without a refund of any charge that may have been levied.
+
+Thank you for helping make this a welcoming, friendly event for all.
