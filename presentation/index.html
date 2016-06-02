@@ -797,7 +797,7 @@ function x({firstName: f, address: {street}}) {
         <h2>Rest and spread</h2>
 <pre class="javascript"><code contenteditable data-trim>
 var cookieMonster = {
-  cookies = [],
+  whatIAte: [],
   eat(){
     for(let cookies of arguments){
       this.cookies.push(cookie);
@@ -810,10 +810,10 @@ var cookieMonster = {
         <h2>Rest and spread</h2>
         <pre class="javascript"><code contenteditable data-trim>
 var cookieMonster = {
-  cookies = [],
+  whatIAte: [],
   eat(...cookies){
     //push is "variadic"
-    this.cookies.push(...cookies);
+    this.whatIAte.push(...cookies);
   },
 }
 </code></pre>
