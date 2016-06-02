@@ -9,7 +9,7 @@ describe('for-of loop', function() {
       "Cherries",
     ];
     for (var i = 0; i < fruits.length; i++) {
-      expect(fruit).to.exist();
+      expect(typeof fruit).to.equal("string");
       expect(fruit).to.equal("Red Apples");
       break;
     }
