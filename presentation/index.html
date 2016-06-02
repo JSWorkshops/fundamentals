@@ -1,130 +1,111 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <title>Fundamentals of ECMAScript</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+  if (window.location.search.match(/print-pdf/gi)) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'css/print/pdf.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+  </script>
+</head>
 
-		<title>Fundamentals of ECMAScript</title>
-
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section data-background="images/shinny.svg" data-background-size="55%"
-				data-background-position="bottom right">
-					<h1>New Shiny</h1>
-				</section>
-
-				<section data-background="images/me.jpg" data-background-size="30%"
-				data-background-position="-20% 50%">
-					<ul>
-						<li>Marcos Caceres</li>
-						<li><a href="https://twitter.com/marcosc">@marcosc</a></li>
-						<li><a href="https://github.com/marcoscaceres">github.com/marcoscaceres</a></li>
-						<li>DOM Team - Mozilla</li>
-					</ul>
-					<aside class="notes">
-						<ul>
-							<li>I work for Mozilla</li>
-							<li>I'm part of the DOM team</li>
-							<li>Designing/new features for the Web</li>
-							<li>Get to use ES on internal projects</li>
-							<li>I'm going to cover that I've found useful</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section data-background="images/new_in_es6.svg">
-					<aside class="notes">
-						<ul>
-							<li>ES is a massive specification.</li>
-							<li>Can't possibly cover it all.</li>
-							<li>I focused on developers building on Browsers.</li>
-							<li>You can apply this stuff to Node, of course. It's not a 1:1.</li>
-							<li>So, what am I going to cover?</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section data-background="images/bg_stars.svg" data-background-size="100%">
-					<h2>New syntax and <br> operators</h2>
-					<ul>
-						<li><code>const</code>, <code>let</code>,  <code>for...of</code></li>
-						<li>Default arguments</li>
-						<li>Fat arrow</li>
-					</ul>
-					<aside class="notes">
-						<ul>
-							<li>A few new ways of creating variables</li>
-							<li>For ... of, a new way of looping over collections</li>
-							<li>How to give argument default values</li>
-							<li>And the fat arrow: new way of creating functions</li>
-							<li>But that's not all...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-					<h2>But wait! there is more.</h2>
-					<ul>
-						<li>Template literals</li>
-						<li>Map and Set</li>
-						<li>New Object literals syntax</li>
-					</ul>
-					<aside class="notes">
-						<ul>
-							<li>Template literals - a new way of dealing with strings</li>
-							<li>Awesome new collection types: Map and Set</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<h2>Problem</h2>
-					<p>Be nice to indicate that a variabled is a constant.</p>
-					<aside class="notes">
-						<ul>
-							<li>Sometimes you know a variable won't change.</li>
-							<li>Nice to tell both the computer and devs that it won't change.</li>
-							<li>ES to the rescue with...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-					<h2>const</h2>
-				</section>
-				<section>
-					<pre class="javascript"><code contenteditable>
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section data-background="images/shinny.svg" data-background-size="55%" data-background-position="bottom right">
+        <h1>New Shiny</h1>
+      </section>
+      <section data-background="images/me.jpg" data-background-size="30%" data-background-position="-20% 50%">
+        <ul>
+          <li>Marcos Cáceres</li>
+          <li><a href="https://twitter.com/marcosc">@marcosc</a></li>
+          <li><a href="https://github.com/marcoscaceres">github.com/marcoscaceres</a></li>
+          <li>DOM Team - Mozilla</li>
+        </ul>
+        <aside class="notes">
+          <ul>
+            <li>I work for Mozilla</li>
+            <li>I'm part of the DOM team</li>
+            <li>Designing/new features for the Web</li>
+            <li>Get to use ES on internal projects</li>
+            <li>I'm going to cover that I've found useful</li>
+          </ul>
+        </aside>
+      </section>
+      <section data-background="images/new_in_es6.svg">
+        <aside class="notes">
+          <ul>
+            <li>ES is a massive specification.</li>
+            <li>Can't possibly cover it all.</li>
+            <li>I focused on developers building on Browsers.</li>
+            <li>You can apply this stuff to Node, of course. It's not a 1:1.</li>
+            <li>So, what am I going to cover?</li>
+          </ul>
+        </aside>
+      </section>
+      <section data-background="images/bg_stars.svg" data-background-size="100%">
+        <h2>New syntax and <br> operators</h2>
+        <ul>
+          <li><code>const</code>, <code>let</code>, <code>for...of</code></li>
+          <li>Default arguments</li>
+          <li>Fat arrow</li>
+        </ul>
+        <aside class="notes">
+          <ul>
+            <li>A few new ways of creating variables</li>
+            <li>For ... of, a new way of looping over collections</li>
+            <li>How to give argument default values</li>
+            <li>And the fat arrow: new way of creating functions</li>
+            <li>But that's not all...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>But wait! there is more.</h2>
+        <ul>
+          <li>Template literals</li>
+          <li>Map and Set</li>
+          <li>New Object literals syntax</li>
+          <li>Rest and spread operators</li>
+        </ul>
+        <aside class="notes">
+          <ul>
+            <li>Template literals - a new way of dealing with strings</li>
+            <li>Awesome new collection types: Map and Set</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>Be nice to indicate that a variabled is a constant.</p>
+        <aside class="notes">
+          <ul>
+            <li>Sometimes you know a variable won't change.</li>
+            <li>Nice to tell both the computer and devs that it won't change.</li>
+            <li>ES to the rescue with...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>const</h2>
+      </section>
+      <section>
+        <pre class="javascript"><code contenteditable>
 const LIGHT_SPEED = 299792458;
 
 // TypeError: Assignment to constant variable.
@@ -136,27 +117,24 @@ LIGHT_SPEED;
 //throws TypeError: redeclaration of const
 const LIGHT_SPEED = "";
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>TALK ABOUT CODE</li>
-					</ul>
-				</aside>
-
-				</section>
-
-
-				<section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<h2>Problem</h2>
-					<p>Be nice to not leak variables all over the place.</p>
-					<aside class="notes">
-						<ul>
-							<li>In JS, variables tend to end up where you don't expect.</li>
-							<li>Let's look at an example</li>
-						</ul>
-					</aside>
-				</section>
-				<section>
-<pre class="javascript"><code contenteditable>
+        <aside class="notes">
+          <ul>
+            <li>TALK ABOUT CODE</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>Be nice to not leak variables all over the place.</p>
+        <aside class="notes">
+          <ul>
+            <li>In JS, variables tend to end up where you don't expect.</li>
+            <li>Let's look at an example</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <pre class="javascript"><code contenteditable>
 var object = {ohhai: "value"}
 for(var i in object){
    var item = object[i];
@@ -164,27 +142,25 @@ for(var i in object){
 console.log(i); // "ohhai", that's annoying.
 console.log(item); //"value", argh.
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>EXPLAIN CODE</li>
-						<li>...ES addresses this with "let"</li>
-					</ul>
-				</aside>
-				</section>
-
-				<section>
-					<h1>let</h1>
-					<aside class="notes">
-						<ul>
-							<li>`let` allows you to associate a variable with a scope.</li>
-							<li>This avoids leaking variables where they are not wanted</li>
-							<li>Let's see how that works...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section class="worksinfirefox">
-				<pre class="javascript"><code contenteditable>
+        <aside class="notes">
+          <ul>
+            <li>EXPLAIN CODE</li>
+            <li>...ES addresses this with "let"</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h1>let</h1>
+        <aside class="notes">
+          <ul>
+            <li>`let` allows you to associate a variable with a scope.</li>
+            <li>This avoids leaking variables where they are not wanted</li>
+            <li>Let's see how that works...</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="worksinfirefox">
+        <pre class="javascript"><code contenteditable>
 let fruits = ["apple", "orange"]
 //keep it in the loop
 for(let i=0; i &lt; fruits.length; i++){
@@ -192,56 +168,50 @@ for(let i=0; i &lt; fruits.length; i++){
 }
 //Reference error: no `fruit` or `i` here!
 console.log(fruit, i);
-				</code></pre>
-				<aside class="notes">
-					<ul>
-						<li>EXPLAIN CODE</li>
-						<li>Let elegantly solves the problem</li>
-					</ul>
-				</aside>
-				</section>
-
-				<section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<h2>Problem</h2>
-					<p>Having to check if a value was passed to a method... is annoying !</p>
-					<aside class="notes">
-						<ul>
-							<li>Code depends on certain input being there.</li>
-							<li>Otherwise it breaks.</li>
-							<li>Having sensible defaults makes code cleaner.</li>
-							<li>Today, you have to do something like...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-
-<pre class="javascript"><code contenteditable>
+        </code></pre>
+        <aside class="notes">
+          <ul>
+            <li>EXPLAIN CODE</li>
+            <li>Let elegantly solves the problem</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>Having to check if a value was passed to a method... is annoying !</p>
+        <aside class="notes">
+          <ul>
+            <li>Code depends on certain input being there.</li>
+            <li>Otherwise it breaks.</li>
+            <li>Having sensible defaults makes code cleaner.</li>
+            <li>Today, you have to do something like...</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <pre class="javascript"><code contenteditable>
 //Today... life is hard
 function myFunction(arg1){
   var  arg1 = arg1 || "some thing";
 }
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>that's a lot of repetition.</li>
-						<li>We can do better...</li>
-					</ul>
-				</aside>
-				</section>
-
-				<section>
-					<h1>Default <br> argument</h1>
-					<aside class="notes">
-						<ul>
-							<li>ES gives us a way of declaring defaults
-							for arguments...</li>
-						</ul>
-					</aside>
-				</section>
-
-			<section class="worksinfirefox">
-<pre class="javascript"><code contenteditable data-trim>
+        <aside class="notes">
+          <ul>
+            <li>that's a lot of repetition.</li>
+            <li>We can do better...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h1>Default <br> argument</h1>
+        <aside class="notes">
+          <ul>
+            <li>ES gives us a way of declaring defaults for arguments...</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="worksinfirefox">
+        <pre class="javascript"><code contenteditable data-trim>
 function Car(
   make = "ford",
   model = "t"){
@@ -254,28 +224,26 @@ let car = new Car();
 //prints "ford"
 console.log(car.make);
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>EXPLAIN CODE</li>
-					</ul>
-				</aside>
-				</section>
-
-			  <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<h2>Problem</h2>
-					<p><code>for</code> loop syntax is annoying.</p>
-					<aside class="notes">
-						<ul>
-						  <li>It really sucks having to write for loops</li>
-						  <li>It's repetitive, mostly boring work.</li>
-						  <li>Nested loops are error prone.</li>
-						  <li>Let's take a look...</li>
-						</ul>
-					</aside>
-				</section>
-
-			  <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-<pre class="javascript"><code contenteditable>
+        <aside class="notes">
+          <ul>
+            <li>EXPLAIN CODE</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p><code>for</code> loop syntax is annoying.</p>
+        <aside class="notes">
+          <ul>
+            <li>It really sucks having to write for loops</li>
+            <li>It's repetitive, mostly boring work.</li>
+            <li>Nested loops are error prone.</li>
+            <li>Let's take a look...</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <pre class="javascript"><code contenteditable>
 //Today... life is hard
 var h1s = document.querySelectorAll("h1");
 
@@ -290,57 +258,52 @@ for(var elem in h1s){
   elem.style.color = "salmon";
 }
 </code></pre>
-					<aside class="notes">
-						<ul>
-							<li>EXPLAIN CODE</li>
-							<li>ES to the rescue...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-					<h1><code>for ... of</code> (iterators)</h1>
-					<aside class="notes">
-						<ul>
-							<li>ES introduces the `of` keyword.</li>
-							<li>Allows you to loop over "iterables".</li>
-							<li>If it's a list of things, you can use it.</li>
-							<li>Let's take a look...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-					<pre class="javascript"><code contenteditable>
+        <aside class="notes">
+          <ul>
+            <li>EXPLAIN CODE</li>
+            <li>ES to the rescue...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h1><code>for ... of</code> (iterators)</h1>
+        <aside class="notes">
+          <ul>
+            <li>ES introduces the `of` keyword.</li>
+            <li>Allows you to loop over "iterables".</li>
+            <li>If it's a list of things, you can use it.</li>
+            <li>Let's take a look...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <pre class="javascript"><code contenteditable>
 var h1s = document.querySelectorAll("h1");
 for(let elem of h1s){
   elem.style.color = "salmon";
 }
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>EXPLAIN CODE</li>
-						<li>Onto our next problem...</li>
-					</ul>
-				</aside>
-				</section>
-
-				<section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<h2>Problem</h2>
-					<p>Having to write <code>function</code> all the time causes
-						carpal tunnel syndrome.</p>
-					<aside class="notes">
-						<ul>
-							<li>True story! :P</li>
-							<li>But seriously, writing `function` all the time sucks.</li>
-							<li>removing "function" make code cleaner</li>
-							<li>Today...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<pre class="javascript"><code contenteditable>
+        <aside class="notes">
+          <ul>
+            <li>EXPLAIN CODE</li>
+            <li>Onto our next problem...</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>Having to write <code>function</code> all the time causes carpal tunnel syndrome.</p>
+        <aside class="notes">
+          <ul>
+            <li>True story! :P</li>
+            <li>But seriously, writing `function` all the time sucks.</li>
+            <li>removing "function" make code cleaner</li>
+            <li>Today...</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <pre class="javascript"><code contenteditable>
 //today
 function findEdible(fruits){
   return fruits.filter(function(item){
@@ -352,53 +315,51 @@ var fruits = ['apple','orange','apricot'];
 //Array [ "apple", "apricot" ]
 console.log(findEdible(fruits))
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>This code allows us to filter edible fruits</li>
-						<li>That is, fruit that start the letter "a".</li>
-						<li>It's a lot of code to do something simple.</li>
-						<li>Note also that you have write "returns" a lot.</li>
-						<li>Let's see how ES helps us do better...</li>
-					</ul>
-				</aside>
-				</section>
-
-				<section>
-					<h1>Fat arrow</h1>
-					<aside class="notes">
-						<ul>
-							<li>ES introduces the fat arrow</li>
-							<li>It's a nice shorthand for function with some neat properties</li>
-							<li>Let's dissect one to see how it works</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section data-background="images/disection.jpg">
-					<pre class="javascript"><code>
+        <aside class="notes">
+          <ul>
+            <li>This code allows us to filter edible fruits</li>
+            <li>That is, fruit that start the letter "a".</li>
+            <li>It's a lot of code to do something simple.</li>
+            <li>Note also that you have write "returns" a lot.</li>
+            <li>Let's see how ES helps us do better...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h1>Fat arrow</h1>
+        <aside class="notes">
+          <ul>
+            <li>ES introduces the fat arrow</li>
+            <li>It's a nice shorthand for function with some neat properties</li>
+            <li>Let's dissect one to see how it works</li>
+          </ul>
+        </aside>
+      </section>
+      <section data-background="images/disection.jpg">
+        <pre class="javascript"><code>
 fatArrow = (params) =&gt; { statements }
-					</code></pre>
-					<p class="attribution">Knitted Hello Kitty Dissection
-						by <a href="https://www.flickr.com/photos/estonia76/">estonia76</a></p>
-					<aside class="notes">
-
-					</aside>
-				</section>
-			  <section>
-			  	<h2>Fun rules to remember:</h2>
-				<ul>
-					<li class="fragment">If you have 1 argument, paranthesis "()" are optional.</li>
-					<li class="fragment">If you have 1 statement, the "{}" are optional.</li>
-					<li class="fragment">If you have 1 statement, "return" is optional.</li>
-				</ul>
-				<aside class="notes">
-					<ul><li>
-						let's see these rules in action.
-					</li></ul>
-				</aside>
-			  </section>
-			  <section>
-					<pre class="javascript"><code contenteditable>//long form
+          </code></pre>
+        <p class="attribution">Knitted Hello Kitty Dissection by <a href="https://www.flickr.com/photos/estonia76/">estonia76</a></p>
+        <aside class="notes">
+        </aside>
+      </section>
+      <section>
+        <h2>Fun rules to remember:</h2>
+        <ul>
+          <li class="fragment">If you have 1 argument, paranthesis "()" are optional.</li>
+          <li class="fragment">If you have 1 statement, the "{}" are optional.</li>
+          <li class="fragment">If you have 1 statement, "return" is optional.</li>
+        </ul>
+        <aside class="notes">
+          <ul>
+            <li>
+              let's see these rules in action.
+            </li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <pre class="javascript"><code contenteditable>//long form
 var multiply = (x,y) => {
   const z = 1;
   return x * y * z;
@@ -409,33 +370,32 @@ multiply(2,3); //6
 var square = x => x * x;
 square(3); //9
 </code></pre>
-					<aside class="notes">
-						<ul>
-							<li>EXPLAIN CODE</li>
-							<li>Let's now return to the filter example.</li>
-						</ul>
-					</aside>
-				</section>
-
-			  <section>
-					<pre class="javascript"><code contenteditable>
+        <aside class="notes">
+          <ul>
+            <li>EXPLAIN CODE</li>
+            <li>Let's now return to the filter example.</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <pre class="javascript"><code contenteditable>
 var fruits = ['apple','orange','apricot'];
 
 var edible = fruits.filter(
   item => /^a/.test(item)
 );
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>Cleans up code nicely</li>
-						<li>is pretty neat.</li>
-						<li>There is one gotcha tho...</li>	
-					</ul>
-				</aside>
-				</section>
-				<section>
-					<h2>Careful! scope of <code>this</code></h2>
-					<pre class="javascript"><code contenteditable>function Car (){
+        <aside class="notes">
+          <ul>
+            <li>Cleans up code nicely</li>
+            <li>is pretty neat.</li>
+            <li>There is one gotcha tho...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Careful! scope of <code>this</code></h2>
+        <pre class="javascript"><code contenteditable>function Car (){
   this.speed = 0;
 }
 
@@ -445,35 +405,32 @@ Car.prototype.drive = (newSpeed) => {
 
 var car = new Car();
 car.drive(1000);
-//prints: 0  (WTF?)
+//prints: 0  (LOLWUT?)
 console.log(car.speed);
 console.log(window.speed); //1000
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>Ok, what the hell happened?</li>
-						<li>Fat arrow takes makes "this" its nearest scope.</li>
-						<li>Most of the time you won't notice. But be careful!</li>
-						<li>No way to modify this behavior (without silly hack).</li>
-					</ul>
-				</aside>
-				</section>
-
-			  <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<h2>Problem</h2>
-					<p>String concatenation is repetitive and annoying.</p>
-					<aside class="notes">
-						<ul>
-							<li>you ain't doing web development unless you are stitching together
-								strings into HTML tags, right?</li>
-							<li>JS has no support for this.</li>
-							<li>Let's take a look at today...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<pre class="javascript"><code contenteditable>
+        <aside class="notes">
+          <ul>
+            <li>Ok, what the hell happened?</li>
+            <li>Fat arrow takes makes "this" its nearest scope.</li>
+            <li>Most of the time you won't notice. But be careful!</li>
+            <li>No way to modify this behavior (without silly hack).</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>String concatenation is repetitive and annoying.</p>
+        <aside class="notes">
+          <ul>
+            <li>you ain't doing web development unless you are stitching together strings into HTML tags, right?</li>
+            <li>JS has no support for this.</li>
+            <li>Let's take a look at today...</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <pre class="javascript"><code contenteditable>
 var data = [{name:"a",link:"page.html"}]
 function processData(data){
   var ul = "&lt;ul>";
@@ -488,50 +445,48 @@ function processData(data){
   return ul;
 }
 processData(data);</code></pre>
-				<aside class="notes">
-					<ul>
-						<li>I'm taking simple data and producing a ul li.</li>
-						<li>Extremely repetitive and really error prone</li>
-						<li>Coping with " and ' is hard.</li>
-						<li>One change can cause the whole thing to break.</li>
-						<li>ES finally brings some relief...</li>
-					</ul>
-				</aside>
-				</section>
-
-				<section>
-					<h1>Template strings</h1>
-					<aside class="notes">
-						<ul>
-							<li>ES introduces a new way of declaring strings called template strings</li>
-							<li>
-									support multiple lines.
-							</li>
-							<li>
-									Reference variables inside the template.
-							</li>
-							<li>
-									Run JS expressions inside the string.
-							</li>
-							<li>
-									Let's take a look at the new syntax to enable this...
-							</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-					<h1>Meet <code>`</code> and <code>${}</code></h1>
-					<aside class="notes">
-						<ul>
-							<li>Back tick to indicate you are now using a template string.</li>
-							<li>Use the dollar curlies to insert variables into the string.</li>
-							<li>Let's have a look!</li>
-						</ul>
-					</aside>
-				</section>
-				<section>
-<pre><code contenteditable data-trim>
+        <aside class="notes">
+          <ul>
+            <li>I'm taking simple data and producing a ul li.</li>
+            <li>Extremely repetitive and really error prone</li>
+            <li>Coping with " and ' is hard.</li>
+            <li>One change can cause the whole thing to break.</li>
+            <li>ES finally brings some relief...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h1>Template strings</h1>
+        <aside class="notes">
+          <ul>
+            <li>ES introduces a new way of declaring strings called template strings</li>
+            <li>
+              support multiple lines.
+            </li>
+            <li>
+              Reference variables inside the template.
+            </li>
+            <li>
+              Run JS expressions inside the string.
+            </li>
+            <li>
+              Let's take a look at the new syntax to enable this...
+            </li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h1>Meet <code>`</code> and <code>${}</code></h1>
+        <aside class="notes">
+          <ul>
+            <li>Back tick to indicate you are now using a template string.</li>
+            <li>Use the dollar curlies to insert variables into the string.</li>
+            <li>Let's have a look!</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <pre><code contenteditable data-trim>
 var data = [{name:"a",link:"page.html"}]
 function processData(data){
   var listItems = "";
@@ -547,65 +502,60 @@ function processData(data){
   return `&lt;ul>${listItems}&lt;/ul>`;
 }
 processData(data);</code></pre>
-					<aside class="notes">
-						<ul>
-							<li>here's same code as before but using ` and ${}</li>
-							<li>Way more legible.</li>
-							<li>Multi line</li>
-							<li>No more concatenation.</li>
-							<li>There one problem tho... (security)</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-		           <h2>Security</h2>
-		           <p>Tagged strings (<code>HTML`...`</code>).</p>
-		           <aside class="notes">
-		           	<ul>
-		           		<li>Injecting random data into HTML is not safe.</li>
-									<li>Part of ES is to support "context"</li>
-									<li>Allow you to say "this is HTML"</li>
-									<li>Code will be automatically escaped and made safe</li>
-									<li>Will be able to write your own template processors.</li>
-									<li>Onto the next problem...</li>
-		           	</ul>
-		           </aside>
-			  </section>
-
-			  <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<h2>Problem</h2>
-					<p>It's hard to create a collection of unique things.</p>
-					<aside class="notes">
-						<ul>
-							<li>When coding, you often need a collection  of unique things.</li>
-							<li>For instance, a collection of unique string, unique numbers,
-								or even unique objects.</li>
-							<li>
-								Right now, we are mostly limited to arrays.
-							</li>
-							<li>
-								Or abusing objects properties
-							</li>
-							<li>
-								Again, ES helps us here with a new type...
-							</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-					<h1>Sets</h1>
-					<aside class="notes">
-						<ul>
-							<li>Sets are just like arrays, but only accept unique values.</li>
-							<li>Let's take a look how they work...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-<pre class="javascript"><code contenteditable data-trim>
+        <aside class="notes">
+          <ul>
+            <li>here's same code as before but using ` and ${}</li>
+            <li>Way more legible.</li>
+            <li>Multi line</li>
+            <li>No more concatenation.</li>
+            <li>There one problem tho... (security)</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Security</h2>
+        <p>Tagged strings (<code>HTML`...`</code>).</p>
+        <aside class="notes">
+          <ul>
+            <li>Injecting random data into HTML is not safe.</li>
+            <li>Part of ES is to support "context"</li>
+            <li>Allow you to say "this is HTML"</li>
+            <li>Code will be automatically escaped and made safe</li>
+            <li>Will be able to write your own template processors.</li>
+            <li>Onto the next problem...</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>It's hard to create a collection of unique things.</p>
+        <aside class="notes">
+          <ul>
+            <li>When coding, you often need a collection of unique things.</li>
+            <li>For instance, a collection of unique string, unique numbers, or even unique objects.</li>
+            <li>
+              Right now, we are mostly limited to arrays.
+            </li>
+            <li>
+              Or abusing objects properties
+            </li>
+            <li>
+              Again, ES helps us here with a new type...
+            </li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h1>Sets</h1>
+        <aside class="notes">
+          <ul>
+            <li>Sets are just like arrays, but only accept unique values.</li>
+            <li>Let's take a look how they work...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <pre class="javascript"><code contenteditable data-trim>
 var fruits = new Set(["apple",
                       "orange", "orange",
                       "pear"]);
@@ -617,44 +567,41 @@ fruits.delete("apple");
 for(let fruit of fruits){ /*fruit*/ };
 fruits.clear(); //empty the set
 </code></pre>
-					<aside class="notes">
-						<ul>
-							<li>They are easy to create, just feed an array</li>
-							<li>Note that it strips out duplicates, which is nice!</li>
-							<li>has - check if it contains something</li>
-							<li>add - add an item, again duplicates ignored</li>
-							<li>sizes - check the sizes</li>
-							<li>delete - clears an item</li>
-							<li>Easy to iterate over.</li>
-							<li>clear - clears everything inside the set</li>
-						</ul>
-					</aside>
-				</section>
-
-			  <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<h2>Problem</h2>
-					<p>Hey! What about key/value pairs !?</p>
-					<aside class="notes">
-						<ul>
-							<li>Again, ES has us covered!</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-					<h1>Maps</h1>
-					<aside class="notes">
-						<ul>
-							<li>Map is just like set, but it let's you store a value</li>
-							<li>Let's take a look...</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
-<pre class="javascript"><code contenteditable data-trim>
+        <aside class="notes">
+          <ul>
+            <li>They are easy to create, just feed an array</li>
+            <li>Note that it strips out duplicates, which is nice!</li>
+            <li>has - check if it contains something</li>
+            <li>add - add an item, again duplicates ignored</li>
+            <li>sizes - check the sizes</li>
+            <li>delete - clears an item</li>
+            <li>Easy to iterate over.</li>
+            <li>clear - clears everything inside the set</li>
+          </ul>
+        </aside>
+      </section>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>Hey! What about key/value pairs !?</p>
+        <aside class="notes">
+          <ul>
+            <li>Again, ES has us covered!</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h1>Maps</h1>
+        <aside class="notes">
+          <ul>
+            <li>Map is just like set, but it let's you store a value</li>
+            <li>Let's take a look...</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <pre class="javascript"><code contenteditable data-trim>
 let store = new Map([["socks",
-	{amount: 5, cost: 10}
+  {amount: 5, cost: 10}
 ]]);
 
 store.set("shoes",{amount:5,cost:99.99});
@@ -663,128 +610,299 @@ for(let item of store){ /*item is array*/ }
 for(let key of store.keys()){ }
 store.clear();
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>Note how we can create a map with a multidimensional array</li>
-						<li>Note we can again things.</li>
-						<li>Note how we can iterate over each item</li>
-						<li>Just over the keys.</li>
-						<li>And clear everything.</li>
-					</ul>
-				</aside>
-				</section>
+        <aside class="notes">
+          <ul>
+            <li>Note how we can create a map with a multidimensional array</li>
+            <li>Note we can again things.</li>
+            <li>Note how we can iterate over each item</li>
+            <li>Just over the keys.</li>
+            <li>And clear everything.</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>WeakMap and WeakSet</h2>
+        <ul>
+          <li>Memory management</li>
+        </ul>
+      </section>
 
-			<section>
-			<h2>WeakMap and WeakSet</h2>
-			<ul>
-				<li>Memory management</li>
-			</ul>
-			</section>
-			  <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-					<h2>Problem</h2>
-					<p>Async programming in JS is hard.</p>
-					<aside class="notes">
-						<ul>
-							<li>The web platform is a event driven environment.</li>
-							<li>We need to deal with all sorts of events.</li>
-							<li>Mouse events, key events, network events, etc.</li>
-							<li>And we are constantly trying to react to these events.</li>
-							<li>Right now, we have to chain callbacks together to handle
-								events. This is hard today...</li>
-						</ul>
-					</aside>
-				</section>
-
-			  <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
-<pre class="javascript"><code contenteditable data-trim>
-/* Pyramid of DOOM! */
-try{
-  var url = "someU.data";
-  showIndicator("fadein",
-    downloadData(url, function(data){
-       processData(rawData, function(data){
-          displayData(data, removeIndicator)
-     });
-    });
-  });
-}catch(e){
-  console.log("argh... screw this!");
-  throw e;
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>Creating object literals is cumbersome.</p>
+        <aside>
+          <ul>
+            <li>Often have to repeat names/values</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Today</h2>
+        <pre class="javascript"><code contenteditable data-trim>
+function makeTruck(make){
+  return {
+    make: make,
+    drive: function(){
+      return "Driving!"
+    }
+  };
 }
 </code></pre>
-				<aside class="notes">
-					<ul>
-						<li>We commonly end up writing code like the above to handle different actions. </li>
-						<li>Dictated by the user experience we want to create.</li>
-						<li>As well as coping with errors - which I didn't do above</li>
-						<li>It gets really complicated. And it's really hard to reason about.</li>
-					</ul>
-				</aside>
-				</section>
+      </section>
 
-				<section>
-					<h2>Great Resources</h2>
-					<ul>
-						<li><a href="http://www.2ality.com/2012/11/guide-esnext.html">
-							A guide to 2ality’s posts on ECMAScript.next/ECMAScript 6, by Dr. Axel Rauschmayer
-						</a>
-						</li>
+      <section>
+        <h2>Enhanced properties</h2>
+        <pre class="javascript"><code contenteditable data-trim>
+function makeTruck(make){
+  return {
+    make,
+    drive() {
+      return "Driving!"
+    }
+  };
+}
+</code></pre>
+      </section>
 
-						<li>
-							<a href="http://www.2ality.com/2014/08/es6-today.html">Using ECMAScript 6 today, by Dr. Axel Rauschmayer</a>
-						</li>
-					
-						<li>
-						<a href="https://www.youtube.com/watch?v=qbKWsbJ76-s">
-						Promises and Generators: control flow utopia, by Forbes Lindesay 
-					</a></li>
-					
-						<li>
-						<a href="http://www.nczonline.net/blog/2012/08/01/a-critical-review-of-ecmascript-6-quasi-literals/">A critical review of ECMAScript 6 quasi-literals,
-						by Nicholas C. Zakas</a>
-						</li>
-					</ul>
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>Extracting properties from objects/arrays leads to redundant code.</p>
+      </section>
 
-				</section>
+      <section>
+        <h2>Today</h2>
+        <pre class="javascript"><code contenteditable data-trim>
+var people = [
+  ["Bob", "S", "Smith"],
+  ["Mary", "W", "Smith"],
+];
 
-				<section>
-					<h1>Thanks! Questions?</h1>
-				</section>
+var objects = people.map((person) => {
+  var firstName = person[0];
+  var lastName = person[2];
+  return {
+    firstName,
+    lastName,
+  };
+});
+        </code></pre>
+      </section>
+      <section>
+        <h2>Array matching</h2>
+<pre class="javascript"><code contenteditable data-trim>
+var people = [
+  ["Bob", "S", "Smith"],
+  ["Mary", "W", "Smith"],
+];
+// We name the positions into variables
+var objects = people
+  // Note we assigning names in
+  // the function's arguments!
+  .map(
+    ([firstName, , lastName])
+      => ({firstName, lastName})
+  );
+</code></pre>
+      </section>
 
-			</div>
-		</div>
+      <section>
+        <h2>Manually destructuring objects</h2>
+<pre class="javascript"><code contenteditable data-trim>
+var person = {
+  firstName: "Mary",
+  middleInitial: "S",
+  lastName: "Smith",
+  address: "123 JS Street",
+};
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+var firstName = person.firstName;
+var middleInitial = person.lastName;
+var lastName = person.middleInitial;
+</code></pre>
+      </section>
+      <section>
+        <h2>Destructuring assignment</h2>
+<pre class="javascript"><code contenteditable data-trim>
+var person = {
+  firstName: "Mary",
+  middleInitial: "S",
+  lastName: "Smith",
+  address: "123 JS Street",
+};
 
-		<script>
+const {
+  firstName,
+  lastName,
+  middleInitial
+} = person;
+</code></pre>
+      </section>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+      <section>
+        <h2>Destructuring assignment - take 2</h2>
+<pre class="javascript"><code contenteditable data-trim>
+var person = {
+  firstName: "Mary",
+  middleInitial: "S",
+  lastName: "Smith",
+  address: "123 JS Street",
+};
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+const {
+  firstName: first,
+  lastName: last,
+  middleInitial: middle
+} = person;
+</code></pre>
+      </section>
 
-				// Parallax scrolling
-				//parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				//parallaxBackgroundSize: '2100px 900px',
+      <section>
+        <h2>Destructuring assignment - functions </h2>
+<pre class="javascript"><code contenteditable data-trim>
+var person = {
+  firstName: "Mary",
+  middleInitial: "S",
+  lastName: "Smith",
+  address: "123 JS Street",
+};
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-		</script>
+function x({firstName: f, lastName: l}) {
+  return [f, l];
+}
+</code></pre>
+      </section>
 
-	</body>
+      <section>
+        <h2>Destructuring assignment - deep matching</h2>
+<pre class="javascript"><code contenteditable data-trim>
+var person = {
+  firstName: "Mary",
+  address: {
+    street:"123 JS Street"
+  },
+};
+
+function x({firstName: f, address: {street}}) {
+  return [f, street];
+}
+</code></pre>
+      </section>
+
+      <section class="whiteboard" data-state="problem" data-background="images/blackboard.jpg">
+        <h2>Problem</h2>
+        <p>Making functions with open-ended arguments is hard</p>
+      </section>
+
+      <section>
+        <h2>Rest and spread</h2>
+<pre class="javascript"><code contenteditable data-trim>
+var cookieMonster = {
+  cookies = [],
+  eat(){
+    for(let cookies of arguments){
+      this.cookies.push(cookie);
+    }
+  }
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>Rest and spread</h2>
+        <pre class="javascript"><code contenteditable data-trim>
+var cookieMonster = {
+  cookies = [],
+  eat(...cookies){
+    //push is "variadic"
+    this.cookies.push(...cookies);
+  },
+}
+</code></pre>
+      </section>
+
+<section>
+        <h2>Rest and spread</h2>
+        <pre class="javascript"><code contenteditable data-trim>
+function namedFunction(first, second, ...theRest){
+  console.log(first, second, theRest);
+}
+namedFunction(1); //1, undefined, []
+namedFunction(1, 2); //1, 2, []
+namedFunction(1, 2, 3, 4); //1, 2, [3, 4]
+</code></pre>
+      </section>
+
+      <section>
+        <h2>Great Resources</h2>
+        <ul>
+          <li><a href="http://www.2ality.com/2012/11/guide-esnext.html">
+              A guide to 2ality’s posts on ECMAScript.next/ECMAScript 6, by Dr. Axel Rauschmayer
+            </a>
+          </li>
+          <li>
+            <a href="http://www.2ality.com/2014/08/es6-today.html">Using ECMAScript 6 today, by Dr. Axel Rauschmayer</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h1>Thanks! Questions?</h1>
+      </section>
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Parallax scrolling
+    //parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+    //parallaxBackgroundSize: '2100px 900px',
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [{
+      src: 'lib/js/classList.js',
+      condition: function() {
+        return !document.body.classList;
+      }
+    }, {
+      src: 'plugin/markdown/marked.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: 'plugin/markdown/markdown.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: 'plugin/highlight/highlight.js',
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    }, {
+      src: 'plugin/zoom-js/zoom.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }, {
+      src: 'plugin/notes/notes.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }]
+  });
+  </script>
+</body>
+
 </html>
