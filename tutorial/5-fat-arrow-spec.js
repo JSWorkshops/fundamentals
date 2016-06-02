@@ -4,25 +4,25 @@ const expect = require('chai').expect;
 describe('fat arrow', () => {
   it('allows functions to be written more succinctly', () => {
     const myFunction = function() {};
-    expect(myFunction.toString()).toEqual('() => {}');
+    expect(myFunction.toString()).to.equal('() => {}');
   });
 
   it('omits parenthesis when we have a single argument', () => {
     const myFunction = function(firstArg) {};
-    expect(myFunction.toString()).toEqual('firstArg => {}');
+    expect(myFunction.toString()).to.equal('firstArg => {}');
   });
 
   it('omits curly braces and return when we have a single return value', () => {
     const sayHi = function() {
       return 'hi!';
     };
-    expect(sayHi.toString()).toEqual("() => 'hi!'");
+    expect(sayHi.toString()).to.equal("() => 'hi!'");
   });
 
   it('supports multiple statements', () => {
     /**
      * Check if something is edible based on a restriction
-     * 
+     *
      * @param  {RegExp} restriction E.g. "/^a/" fruits that start with "a"
      */
     function edible(restriction) {
