@@ -1,11 +1,21 @@
-# Getting setup 
+## Getting setup
+You need, [Node 6](https://nodejs.org/en/) and the [Mocha](https://mochajs.org/) testing framework.
 
-You need, Node 6. You can grab it from [NodeJS.org](https://nodejs.org/en/) as well as Mocha (a testing framework which we will use). 
-
-Or you can install node through the command line, if you have [brew](http://brew.sh) installed. 
+### MacOS
+Or you can install NodeJS and Mocha through the command line, if you have [brew](http://brew.sh) installed.
 
 ```Bash
 brew install node
+npm install -g mocha
+```
+
+### Windows
+[Download the installer](https://nodejs.org/en/) and follow the prompts.
+
+Once you have Node installed:
+
+```Bash
+npm install -g mocha
 ```
 
 ## Check your versions!
@@ -24,8 +34,16 @@ Similarly with Mocha
 mocha --version
 ```
 
-Should say something like 2.4.5. 
+Should say something like 2.4.5.
 
-## Getting started 
+## Getting the tutorials
 
-In you favorite editor, open up each of the exercises. 
+Clone the following repository:
+
+```Bash
+git clone git@github.com:JSWorkshops/fundamentals.git
+cd fundamental/tutorial
+npm install
+```
+
+In you favorite editor, open up each of the exercises.
