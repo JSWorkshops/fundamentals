@@ -31,7 +31,7 @@ describe('fat arrow', () => {
       };
     }
     const fruits = ['apple', 'orange', 'apricot'];
-    const edibleFruitFilter = edible(/orange/);
+    const edibleFruitFilter = edible(/^(?!orange$)/);
     const edibleFruit = fruits.filter(edibleFruitFilter);
     expect(edibleFruit).to.eql(["apple", "apricot"]);
   });
