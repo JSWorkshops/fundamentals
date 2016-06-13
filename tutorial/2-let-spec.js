@@ -8,15 +8,22 @@ describe('let', function() {
     greeting: "hello!"
   };
 
-  for (var prop in object) {
-    var item = object[prop];
-  }
 
   it("shouldn't leak out of context", function() {
-    expect(item).to.be.undefined;
-    expect(item).to.not.equal("hello!");
-    expect(prop).to.be.undefined;
-    expect(prop).to.not.equal("greeting");
+    for (var prop in object) {
+      expect(prop).to.equal("greeting");
+
+      var item = object[prop];
+      expect(item).to.equal("hello!");
+    }
+
+    expect(function(){
+      return (prop);
+    }).to.throw(ReferenceError);
+
+    expect(function(){
+      return (item);
+    }).to.throw(ReferenceError);
   });
 
   it("should be possible to reassign a let, in different scope", function() {
