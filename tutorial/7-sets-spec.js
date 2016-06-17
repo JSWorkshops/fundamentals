@@ -3,18 +3,20 @@ const expect = require('chai').expect;
 
 describe("Set", () => {
   it("stores values uniquely", () => {
-    //conver to a new Set
+    //convert to a new Sets
     const fruits = ["🍏", "🍊", "🍌", "🍓"];
     const deserts = ["🍰", "🍪", "🍧"];
-    //expect(fruits.has("🍌")).to.be(false); 
-    //expect(fruits.has("🍌")).to.be(true);
+    //expect(fruits.has("🍌")).to.be(false);
+    //expect(fruits.has("🍒")).to.be(true);
     //expect(fruits.size).to.be(4);
     fruits.delete("🍌");
 
-    const food = []; // User Array.from() and combine fruits and desets into an array
+    // Use Array.from() to combine fruits and deserts
+    // into an array
+    const food = [];
 
     //empty the set
-    expect(fruits.size).to.be(0);
+    expect(fruits.size).to.equal(0);
   });
 });
 
