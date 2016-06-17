@@ -4,7 +4,9 @@
   "description": "Fundamentals of modern ECMAScript",
   "main": "1_const.js",
   "scripts": {
-    "test": "mocha"
+    "mocha": "mocha",
+    "test": "mocha *.js",
+    "test:dev": "mocha --watch"
   },
   "author": "Marcos Caceres",
   "license": "ISC",
