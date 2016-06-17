@@ -3,7 +3,7 @@ You need, [Node 6](https://nodejs.org/en/).
 
  * [Download the installer](https://nodejs.org/en/) and follow the prompts.
 
-Or use your favorite package manager to get it (e.g., (HomeBrew)[http://brew.sh/] on MacOS, [apt-get](https://en.wikipedia.org/wiki/Advanced_Packaging_Tool) on Linux). 
+Or use your favorite package manager to get it (e.g., [HomeBrew](http://brew.sh) on MacOS, [apt-get](https://en.wikipedia.org/wiki/Advanced_Packaging_Tool) on Linux). 
 
 ## Check your Node version!
 This is how you check what version of Node you have:
