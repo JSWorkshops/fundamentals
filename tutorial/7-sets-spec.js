@@ -6,9 +6,9 @@ describe("Set", () => {
     //convert to a new Sets
     const fruits = ["🍏", "🍊", "🍌", "🍓"];
     const deserts = ["🍰", "🍪", "🍧"];
-    //expect(fruits.has("🍌")).to.be(false);
-    //expect(fruits.has("🍒")).to.be(true);
-    //expect(fruits.size).to.be(4);
+    //expect(fruits.has("🍌")).to.equal(false);
+    //expect(fruits.has("🍒")).to.equal(true);
+    //expect(fruits.size).to.equal(4);
     fruits.delete("🍌");
 
     // Use Array.from() to combine fruits and deserts

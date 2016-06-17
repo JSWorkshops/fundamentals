@@ -50,10 +50,10 @@ describe('fat arrow', () => {
     const sortedData = data;
     //.filter() out things with no name or link
     //.sort() using .localeCompare
-    expect(sortedData.length).to.be(6);
-    expect(sortedData[0].name).to.be("Autos");
-    expect(sortedData[1].name).to.be("Åutos");
-    expect(sortedData[5].name).to.be("TV");
+    expect(sortedData.length).to.equal(6);
+    expect(sortedData[0].name).to.equal("Autos");
+    expect(sortedData[1].name).to.equal("Åutos");
+    expect(sortedData[5].name).to.equal("TV");
   });
 
 });
