@@ -1,12 +1,12 @@
 {
   "name": "jsworkshops-fundamentals",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Fundamentals of modern ECMAScript",
   "main": "tutorial/1_const.js",
   "scripts": {
     "mocha": "mocha",
-    "test": "mocha *.js",
-    "test:dev": "mocha --watch"
+    "test": "mocha tutorial/*-spec.js",
+    "test:dev": "mocha --watch tutorial"
   },
   "author": "Marcos Caceres",
   "license": "ISC",
