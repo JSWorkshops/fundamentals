@@ -6,7 +6,7 @@
   "scripts": {
     "mocha": "mocha",
     "test": "mocha tutorial/*-spec.js",
-    "test:dev": "mocha --watch tutorial"
+    "test:dev": "mocha --watch"
   },
   "author": "Marcos Caceres",
   "license": "ISC",
