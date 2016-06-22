@@ -2,7 +2,7 @@
   "name": "jsworkshops-fundamentals",
   "version": "0.0.1",
   "description": "Fundamentals of modern ECMAScript",
-  "main": "1_const.js",
+  "main": "tutorial/1_const.js",
   "scripts": {
     "mocha": "mocha",
     "test": "mocha *.js",
