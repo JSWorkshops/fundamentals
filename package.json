@@ -1,6 +1,6 @@
 {
   "name": "jsworkshops-fundamentals",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fundamentals of modern ECMAScript",
   "main": "tutorial/1_const.js",
   "scripts": {
