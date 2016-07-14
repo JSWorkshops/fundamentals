@@ -15,5 +15,9 @@ This talk aims to give an overview of the new syntax, operators, and primitives 
 ### Target Audience
 This is a beginner level tutorial for Web/Node developers. However, it assumes you know a bit about ECMAScript/JavaScript already.
 
+### Resources 
+
+ * 🎥 [var, let and const - What, why and how](https://www.youtube.com/watch?v=sjyJBL5fkp8) by funfunfunction.
+
 ## Code of Conduct
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
