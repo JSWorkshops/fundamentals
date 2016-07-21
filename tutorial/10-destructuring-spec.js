@@ -1,7 +1,7 @@
 "use strict";
-const expect = require('chai').expect;
+const {expect} = require("chai");
 
-describe('destructuring', function() {
+describe("destructuring", function() {
   it("allows us to name parts of arrays as variables", () => {
     const person = ["Bob", "W", "Smith"];
     let firstName;
